@@ -1,5 +1,162 @@
 @import "custom";
 @import "default-class";
+@import "slick";
 @import "layout";
 
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Lobster', cursive;
+
 //HEADER styles
+header {
+  .container {
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $standartBg;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    .logo {
+      padding-bottom: 10px;
+      a {
+        font-family: 'Lobster', cursive;
+        color: $logo;
+        font-size: 43px;
+        transition: .3s linear;
+        &:hover{
+          color: $navFontColor;
+          transition: .3s linear;
+        }
+      }
+    }
+    .header-nav {
+      height: 100%;
+      ul{
+        height: 100%;
+        font-size: 0;
+        li{
+          height: 100%;
+          display: inline-block;
+          &:nth-child(6){
+            margin-right: -25px;
+          }
+          &+li{
+            margin: 0 -1px;
+          }
+          a{
+            color: $navFontColor;
+            font-size: 15px;
+            padding: 42px 25px;
+            line-height: 6;
+            transition: .2s linear;
+            border-bottom: 3px solid transparent;
+            &:hover{
+              color: $navHovColor;
+              border-bottom: 3px solid $navHovColor;
+              background: $hovBg;
+              transition: .2s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//MAIN styles
+main{
+  .full-height{
+    height: 100vh;
+    position: relative;
+    .corusel-img{
+      height: 100vh;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .corusel-content{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color:  $standartBg;
+      h1{
+        text-align: center;
+        font-size: 63px;
+        font-weight: 600;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+        margin-bottom: 25px;
+      }
+      span{
+        font-size: 23px;
+        max-width: 377px;
+        text-align: center;
+        margin-bottom:50px;
+      }
+      a{
+        border-radius: 5px;
+        border: 3px solid $standartBg;
+        background-color:  rgba(73, 203, 205, 0);
+        width: 231px;
+        height: 69px;
+        font-size: 26px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $standartBg;
+        transition: .25s;
+        &:hover{
+          border: 3px solid rgba(255,255,255,0);
+          background: rgba(255,255,255,0.3);
+          color: $standartFont;
+          transition: .25s;
+        }
+      }
+    }
+  }
+}
+.slick-arrow{
+  outline: none;
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  height: 51px;
+  width: 51px;
+  font-size: 50px;
+  color: $arrows;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transition: .25s;
+  padding: 0;
+  :hover{
+    color: $standartFont;
+    transition: .25s;
+  }
+
+}
+.slick-prev{
+  left: 29px;
+}
+.slick-next{
+  right: 29px;
+}
+.fa{
+  width: 100%;
+  height:100%;
+  vertical-align: super;
+  border-radius: 50%;
+  transition: .25s;
+}
+.fa-angle-right{
+  padding-left: 3px;
+}

@@ -2,11 +2,11 @@
 
 body{
   margin:0 auto;
-  background: #828177;
+  font-family: 'Open Sans', sans-serif;
+  color: $standartFont;
   a{
     text-decoration: none;
-    list-style-type: none;
-    color: #fff;
+    list-style:none;
     &:hover{
       text-decoration: none;
     }
@@ -14,5 +14,8 @@ body{
   h1,h2,h3,h4,h5,h6,span,a,p,ul,li{
     margin:0 auto;
     padding: 0;
+  }
+  .wrapper{
+    padding: 0 135px;
   }
 }
