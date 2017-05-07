@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Author test</title>
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!--fonts-->
@@ -21,7 +22,7 @@
             <a href="#">Author</a>
         </div>
         <div class="header-nav">
-            <ul>
+            <ul id="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#service">Service</a></li>
                 <li><a href="#home">Portfolio</a></li>
@@ -145,8 +146,8 @@
                             <li>Prnare nisi pretium.</li>
                         </ul>
                     </div>
-                    <div class="buy-btn">
-                        <a href="#">Buy now</a>
+                    <div class="buy-btn-wrapper">
+                        <a href="#" class="buy-btn">Buy now</a>
                     </div>
                 </div>
                 <div class="select">
@@ -166,8 +167,8 @@
                             <li>Prnare nisi pretium.</li>
                         </ul>
                     </div>
-                    <div class="buy-btn">
-                        <a href="#">Buy now</a>
+                    <div class="buy-btn-wrapper">
+                        <a href="#" class="buy-btn">Buy now</a>
                     </div>
                 </div>
                 <div class="select">
@@ -187,8 +188,8 @@
                             <li>Prnare nisi pretium.</li>
                         </ul>
                     </div>
-                    <div class="buy-btn">
-                        <a href="#">Buy now</a>
+                    <div class="buy-btn-wrapper">
+                        <a href="#" class="buy-btn">Buy now</a>
                     </div>
                 </div>
             </div>
@@ -221,11 +222,17 @@
                         <span>info@mail.com</span>
                     </div>
                 </div>
-                <form id="comment-form">
-                    <input type="name" class="name" placeholder="Name" minlength="2" required>
-                    <input type="email" class="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button>Send</button>
+                <form id="comment-form" class="comment-form">
+
+                    <input id="inputName" class="fillIt name" name="name" placeholder="Name">
+                    <!--<label for="name" class="nameLabel">Please, enter your name</label>-->
+
+                    <input id="inputEmail" class="fillIt email" name="email" placeholder="Email">
+                    <!--<label for="email" class="emailLabel">Please, enter valid email</label>-->
+
+                    <textarea type="text" placeholder="Message"></textarea>
+
+                    <button type="submit" class="btn btn-default">Send</button>
                 </form>
             </div>
         </div>
@@ -234,9 +241,10 @@
 <!--FOOTER END-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
 <script src="js/libs.min.js"></script>
-<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+
 <!--All js init-->
 <script src="js/main.js"></script>
 </body>

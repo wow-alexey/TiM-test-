@@ -200,6 +200,9 @@ main {
           font-size: 26px;
           padding: 23px 0 25px 0;
           border-radius: 3px 3px 0 0;
+          &.title-hover{
+            background: $navHovColor;
+          }
         }
         .price {
           background: $hovBg;
@@ -220,17 +223,20 @@ main {
             }
           }
         }
-        .buy-btn {
+        .buy-btn-wrapper {
           background: $hovBg;
           border-radius: 0 0 3px 3px;
           padding: 37px 0;
-          a {
+          .buy-btn {
             padding: 12px 50px;
             font-size: 17px;
             font-weight: 600;
             border-radius: 3px;
             background: $btnBg;
             color: $standartBg;
+            &:hover{
+              background: $navHovColor;
+            }
           }
         }
       }
@@ -309,7 +315,8 @@ footer {
       }
       form{
         text-align: right;
-        input{
+        position: relative;
+        input.fillIt{
           display: inline-block;
           color: #c1c1c1;
           font-size: 16px;
@@ -323,9 +330,13 @@ footer {
           font-family: inherit;
           height: 44px;
           outline: none;
+          &.error{
+            box-shadow: 0 0 10px 2px red;
+          }
           &.email{
             margin-left:29px;
           }
+
         }
         textarea{
           display: block;
@@ -353,6 +364,19 @@ footer {
           -webkit-border-radius: 2px;
           border-radius: 2px;
           padding: 12px 60px;
+          cursor: pointer;
+        }
+        label{
+          display: none;
+          position: absolute;
+          top: 50px;
+          color: red;
+          &#inputName-error{
+            left: 0;
+          }
+          &#inputEmail-error{
+            right: 13px;
+          }
         }
       }
     }
@@ -399,4 +423,40 @@ footer {
 
 .fa-angle-right {
   padding-left: 3px;
+}
+
+//Slick menu
+.slicknav_menu {
+  display:none;
+  background: transparent;
+}
+.slicknav_icon{
+  font-size: 30px;
+}
+.slicknav_icon-bar{
+  background-color: black !important;
+  border-radius: 15px !important;
+}
+.slicknav_btn {
+  background-color: transparent;
+}
+.slicknav_nav{
+  background: white;
+  border-radius: 5px;
+  width:159px;
+  a{
+    margin: 0;
+    padding: 8px 0;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+
+  }
+}
+.slicknav_collapsed{
+  transition: .3s linear;
+}
+.slicknav_open{
+  transition: .3s linear;
+  margin-top: 300px;
 }
