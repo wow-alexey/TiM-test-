@@ -74,15 +74,15 @@
 
 @media (max-width: 734px) {
   #menu {
-    display:none !important;
-  }
-  .slicknav_menu {
-    display:block !important;
-  }
-  .header-nav{
     display: none !important;
   }
-  .container{
+  .slicknav_menu {
+    display: block !important;
+  }
+  .header-nav {
+    display: none !important;
+  }
+  .container {
     flex-direction: row-reverse;
   }
   main .service-block .options .select {
@@ -91,30 +91,113 @@
 }
 
 @media (max-width: 575px) {
-  .options{
+  .options {
     flex-wrap: wrap;
     justify-content: space-around !important;
   }
-  .title{
+  .title {
     font-size: 18px !important;
     padding: 6% 0 !important;
   }
-  .price{
+  .price {
     font-size: 15px !important;
     padding: 6% 0 !important;
   }
-  .offers{
-    li{
+  .offers {
+    li {
       padding: 3% 0 !important;
       font-size: 12px !important;
     }
   }
-  .buy-btn-wrapper{
+  .buy-btn-wrapper {
     padding: 10% 0 !important;
-    .buy-btn{
+    .buy-btn {
       padding: 4% 12% !important;
       font-size: 14px !important;
     }
   }
+  .corusel-content {
+    h1 {
+      font-size: 35px !important;
+      margin-bottom: 3% !important;
+    }
+    span {
+      font-size: 18px !important;
+      margin-bottom: 4% !important;
+    }
+    a {
+      width: 35% !important;
+      height: 10% !important;
+      font-size: 15px !important;
+    }
+  }
+  .contact-content form {
+    input.fillIt {
+      width: 77% !important;
+      &.email {
+        margin-top: 7%;
+        margin-left: 0 !important;
+      }
+    }
+    textarea{
+      margin-top: 7% !important;
+    }
+    button{
+      margin-top: 1% !important;
+    }
+  }
+  footer .contact-block .contact-content form label#inputEmail-error {
+    text-align: left !important;
+    right: 0 !important;
+    left: 10% !important;
+    top: 32% !important;
+  }
+  footer .contact-block .contact-content form label#inputName-error {
+    left: 10% !important;
+  }
+
+
 }
 
+@media (max-width: 433px) {
+  main .service-block .options .select {
+    min-width: 45% !important;
+    &:nth-child(3){
+      margin-top: 6%;
+    }
+  }
+  .item-photo{
+    width: 130px !important;
+    height: 130px !important;
+    margin: 0 auto !important;
+  }
+  .team-block .team-content .item-name {
+    font-size: 18px !important;
+    margin-top: 5% !important;
+  }
+  main .team-block .team-content .team-item .item-position {
+    font-size: 12px !important;
+  }
+  .team-block .team-content .item-description{
+    margin-top: 2% !important;
+    font-size: 12px !important;
+  }
+  main .team-block .team-content .team-item .item-photo span {
+    font-size: 58px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .corusel-content {
+    h1 {
+      font-size: 19px !important;
+    }
+    span {
+      font-size: 13px !important;
+      max-width: 200px !important;
+    }
+    a {
+      font-size: 10px !important;
+    }
+  }
+}
